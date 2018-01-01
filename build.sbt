@@ -27,6 +27,6 @@ libraryDependencies := {
   }
 }
 
-scalafmtConfig in ThisBuild := Some(file(".scalafmt"))
+scalafmtConfig in ThisBuild := file(".scalafmt")
 
 mainClass in Compile := Some("io.coding.me.protoc.uml.Main")
