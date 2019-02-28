@@ -1,7 +1,5 @@
 # protoc-gen-uml
 
-[![Build Status](https://travis-ci.org/tssp/protoc-gen-uml.svg?branch=master)](https://travis-ci.org/tssp/protoc-gen-uml)
-
 [Protocol buffer compiler plugin](https://developers.google.com/protocol-buffers/docs/reference/other) for UML diagrams.
 
 When dealing with protocol buffers in your project, it is often quite difficult to get a proper overview - or better the essence of the data model, especially when you have many types.
@@ -40,8 +38,13 @@ protoc --uml_out=/tmp -I src/test/resources/sample-protos/complex/ src/test/reso
 
 The model file itself is not that useful, but converting it to a graphic finally makes it more readable (ensure to have PlantUML installed):
 
+Fetch latest plantuml.jar
 ```bash
-plantuml /tmp/complete_model.puml
+wget https://downloads.sourceforge.net/project/plantuml/plantuml.jar\?r\=https%3A%2F%2Fsourceforge.net%2Fprojects%2Fplantuml%2Ffiles%2Fplantuml.jar%2Fdownload\&ts\=1551354474 -o plantuml.jar
+```
+
+```bash
+java -jar ./plantuml.jar -tsvg ./complete_model.puml
 ```
 
 ## Versions
