@@ -8,4 +8,4 @@ project/boot/
 .history
 .cache
 *.swp
-.idea
+.idea/
